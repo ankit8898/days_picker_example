@@ -1,0 +1,6 @@
+<h2>Days Picker Example </h2>
+<h4 class="subheader">Select a Year</h4>
+<%= simple_form_for DaysPicker.new, url: {action: "create"}, remote: true do |f| %>
+  <%= f.input :year, collection: 2013..2050,label: false,include_blank: false %>
+  <%= f.button :submit %>
+<% end %>
