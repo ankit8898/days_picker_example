@@ -8,9 +8,8 @@ class DaysPickerController < ApplicationController
 	def create
 	  year = params[:year].to_i
 	  @data = DaysPicker.fetch_for(year)
-	  p @data
        respond_to do |format|
-       format.js
+       format.js { }
   
 	   end
 	end

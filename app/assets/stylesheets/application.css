@@ -14,3 +14,12 @@
  */
 
 .row.extramargin {margin: 50px auto 10px !important;}
+
+.wrapper {
+    text-align: center;
+}
+
+.button-center {
+    position: absolute:
+    top: 50%;
+}

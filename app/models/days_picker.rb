@@ -15,14 +15,14 @@ class DaysPicker
   
   def self.fetch_for(year)
   	hsh = HashWithIndifferentAccess.new
-  	hsh[:weekdays] = Weekdays.by_year(year).count
-  	hsh[:sundays] = Sundays.by_year(year).count
-  	hsh[:mondays] = Mondays.by_year(year).count
-  	hsh[:tuesdays] = Tuesdays.by_year(year).count
-  	hsh[:wednesdays] = Wednesdays.by_year(year).count
-  	hsh[:thursdays] = Thursdays.by_year(year).count
-  	hsh[:fridays] = Fridays.by_year(year).count
-  	hsh[:saturdays] = Saturdays.by_year(year).count
+  	hsh[:weekdays] = Weekdays.by_year(year).count.to_s
+  	hsh[:sundays] = Sundays.by_year(year).count.to_s
+  	hsh[:mondays] = Mondays.by_year(year).count.to_s
+  	hsh[:tuesdays] = Tuesdays.by_year(year).count.to_s
+  	hsh[:wednesdays] = Wednesdays.by_year(year).count.to_s
+  	hsh[:thursdays] = Thursdays.by_year(year).count.to_s
+  	hsh[:fridays] = Fridays.by_year(year).count.to_s
+  	hsh[:saturdays] = Saturdays.by_year(year).count.to_s
   	hsh
   end
 
