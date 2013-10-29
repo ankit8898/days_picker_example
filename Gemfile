@@ -7,7 +7,9 @@ gem 'rails', '4.0.1.rc3'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 
-gem 'pg'
+group :development do 
+  gem 'sqlite3'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -37,6 +39,11 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :production do 
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 gem 'zurb-foundation'
