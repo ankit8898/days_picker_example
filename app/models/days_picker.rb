@@ -3,7 +3,7 @@ class DaysPicker
   include ActiveModel::Conversion
   extend ActiveModel::Naming
   
-  attr_accessor :year
+  attr_accessor :year, :type,:month
   
   validates_presence_of :year
   

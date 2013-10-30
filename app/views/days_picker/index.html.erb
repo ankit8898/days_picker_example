@@ -1,54 +1,5 @@
-<h2>Days Picker Example </h2>
-<h4 class="subheader">Select a Year</h4>
-<%= simple_form_for DaysPicker.new, url: {action: "create"}, remote: true do |f| %>
-  <%= f.input :year, collection: 2013..2050,label: false,include_blank: false,class: 'year' %>
-  <div class='wrapper'>
-   <%= f.button :submit ,value: 'Get Dates', class: 'button-center' %>
-  </div>
-  
-<% end %>
+<%= render 'by_year_and_month' %>
+
+<%= render 'by_year' %>
 
 
-<h4 class="subheader">Total days in a year method used | by_year</h4>
-<table>
-  <thead>
-    <tr>
-      <th width="300">Type</th>
-      <th width="350">Number of Days</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Weekdays</td>
-      <td><div id='weekdays'></div></td>
-    </tr>
-      <tr>
-      <td>Sundays</td>
-      <td><div id='sundays'></div></td>
-    </tr>
-      <tr>
-      <td>Mondays</td>
-      <td><div id='mondays'></div></td>
-    </tr>
-      <tr>
-      <td>Tuesdays</td>
-      <td><div id='tuesdays'></div></td>
-    </tr>
-      <tr>
-      <td>Wednesdays</td>
-      <td><div id='wednesdays'></div></td>
-    </tr>
-      <tr>
-      <td>Thursdays</td>
-      <td><div id='thursdays'></div></td>
-    </tr>
-      <tr>
-      <td>Fridays</td>
-      <td><div id='fridays'></div></td>
-    </tr>
-      <tr>
-      <td>Saturdays</td>
-      <td><div id='saturdays'></div></td>
-    </tr>
-  </tbody>
-</table>

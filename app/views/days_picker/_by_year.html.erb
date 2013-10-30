@@ -1,0 +1,23 @@
+<h1 class="subheader">Example 2</h1>
+<%= form_for DaysPicker.new, url: {action: "create"},html: {class: 'custom'}, remote: true do |f| %>
+  <div class="row">
+    <div class="large-12 columns">
+      <label for="customDropdown1">Select a date</label>
+      <%= f.select :year, 2013..2050,class: 'medium', id: 'customDropdown1' %>
+      <%= f.submit 'Get Dates',class: "medium button" %>
+    </div>
+  </div>
+<% end %>
+<div class="panel">
+  <ul class="pricing-table">
+  <li class="title">The Helper User for this is by_year</li>
+  <li class="bullet-item"><h6> Weekdays - <span id='weekdays'></span></h6></li>
+  <li class="bullet-item"><h6> Sundays - <span id='sundays'></span></h6></li>
+  <li class="bullet-item"><h6> Mondays - <span id='mondays'></span></h6></li>
+  <li class="bullet-item"><h6> Tuesdays - <span id='tuesdays'></span></h6></li>
+  <li class="bullet-item"><h6> Wednesdays - <span id='wednesdays'></span></h6></li>
+  <li class="bullet-item"><h6> Thursdays - <span id='thursdays'></span></h6></li>
+  <li class="bullet-item"><h6> Fridays - <span id='fridays'></span></h6></li>
+  <li class="bullet-item"><h6> Saturdays - <span id='saturdays'></span></h6></li>
+</ul>
+</div>
