@@ -1326,3 +1326,8 @@ $topbar-margin-bottom: 50;
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 
 @import 'foundation';
+
+body
+{
+ background: #fff url('bg.png') fixed repeat left top
+}
