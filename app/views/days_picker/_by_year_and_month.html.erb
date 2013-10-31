@@ -1,21 +1,26 @@
 <h1 class="subheader">Example 1 <i class="fa fa-bookmark"></i></h1>
 <%= form_tag by_year_and_months_path, method: :get, class: 'custom', remote: true do  %>
-  <div class="row">
-    <div class="large-4 columns">
-      <label for="customDropdown1">Select a Day Type</label>
-      <%= select_tag :type, options_for_select(DaysPicker.types, 'weekdays'), id: 'customDropdown1' %>  
-      <%= submit_tag 'Get Dates',class: "medium button success" %>
-    </div>
-       <div class="large-4 columns">
-      <label for="customDropdown1">Select a Month</label>
-      <%= select_month(Date.today,:field_name => 'month',class: 'medium', id: 'customDropdown1') %>  
-    </div>
-       <div class="large-4 columns">
-      <label for="customDropdown1">Select a Year</label>
-     <%= select_tag :year, options_for_select(2009..2050, Date.today.year.to_s), id: 'customDropdown1' %>
-    </div>
-    
+<div class="row">
+  <div class="large-4 columns">
+    <label for="customDropdown1">Select a Day Type</label>
+    <%= select_tag :type, options_for_select(DaysPicker.types, 'weekdays'), id: 'customDropdown1' %>  
   </div>
+  <div class="large-4 columns">
+    <label for="customDropdown1">Select a Month</label>
+    <%= select_month(Date.today,:field_name => 'month',class: 'medium', id: 'customDropdown1') %>  
+  </div>
+  <div class="large-4 columns">
+    <label for="customDropdown1">Select a Year</label>
+    <%= select_tag :year, options_for_select(2009..2050, Date.today.year.to_s), id: 'customDropdown1' %>
+  </div>
+  
+</div>
+
+<div class="row">
+ <div class="large-12 columns">
+  <%= submit_tag 'Get Dates',class: "medium button success" %>
+</div>
+</div>
 <% end %>
 
 

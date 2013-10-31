@@ -1,16 +1,13 @@
 class DaysPickerController < ApplicationController
 
 	def index
-		p "hee"
-		@user = 'Weekdays.by_year(2012)'
+	
 	end
 
 
 	def by_year
 		@type = params[:type]
 		@year = params[:year].to_i
-		p "0000000#{@year.inspect}"
-		p "0000000#{@year.class}"
 		@dates = eval(@type).by_year(@year)
 		@count = @dates.count
 		@data = {count: @count, type: @type, year: @year, dates: @dates}
@@ -24,8 +21,9 @@ class DaysPickerController < ApplicationController
 		@year = params[:year]
 		@month = params[:date][:month]
 		@dates = eval(@type).by_year_and_month(@year.to_i,@month.to_i)
+		@formatted_dates = @dates.collect {|i| i.strftime('%d-%b-%Y')}.join(', ')
 		@count = @dates.count
-		@data = {count: @count, type: @type, year: @year, dates: @dates,month: @month}
+		@data = {count: @count, type: @type, year: @year, dates: @formatted_dates,month: @month}
 		respond_to do |format|
            format.js 
 	   end
