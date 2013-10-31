@@ -4,5 +4,5 @@ This is a sample Application showing the usage of [Days Picker Gem](https://ruby
 
 
 
-
+![alt tag](https://raw.github.com/ankit8898/days_picker_example/master/app/assets/images/app.png)
 
