@@ -8,8 +8,10 @@ class DaysPickerController < ApplicationController
 
 	def by_year
 		@type = params[:type]
-		@year = params[:year]
-		@dates = eval(@type).by_year(@year.to_i)
+		@year = params[:year].to_i
+		p "0000000#{@year.inspect}"
+		p "0000000#{@year.class}"
+		@dates = eval(@type).by_year(@year)
 		@count = @dates.count
 		@data = {count: @count, type: @type, year: @year, dates: @dates}
 		respond_to do |format|
