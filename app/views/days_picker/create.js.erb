@@ -1,3 +1,5 @@
+$('#myModal').html("<%= escape_javascript(@data[:weekdays]) %>")
+$('#myModal').foundation('reveal', 'open');
 $("#weekdays").html("<%= escape_javascript(@data[:weekdays]) %>")
 $("#sundays").html("<%= escape_javascript(@data[:sundays]) %>")
 $("#mondays").html("<%= escape_javascript(@data[:mondays]) %>")

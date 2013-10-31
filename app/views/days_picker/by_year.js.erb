@@ -1,0 +1,2 @@
+$('#myModal').html("<%= escape_javascript(render partial: 'output', locals: {type: @data[:type], year: @data[:year], days: @data[:count],by_month: true}) %>")
+$('#myModal').foundation('reveal', 'open');

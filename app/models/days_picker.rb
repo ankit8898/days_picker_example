@@ -5,6 +5,7 @@ class DaysPicker
   
   attr_accessor :year, :type,:month
   
+  @@types = ['weekdays', 'sundays', 'mondays', 'tuesdays', 'wednesdays', 'thursdays', 'fridays', 'saturdays']
   validates_presence_of :year
   
   def initialize(attributes = {})
@@ -13,6 +14,7 @@ class DaysPicker
     end
   end
   
+
   def self.fetch_for(year)
   	hsh = HashWithIndifferentAccess.new
   	hsh[:weekdays] = Weekdays.by_year(year).count.to_s
@@ -24,6 +26,10 @@ class DaysPicker
   	hsh[:fridays] = Fridays.by_year(year).count.to_s
   	hsh[:saturdays] = Saturdays.by_year(year).count.to_s
   	hsh
+  end
+  
+  def self.types
+    @@types.collect(&:capitalize)
   end
 
   def persisted?

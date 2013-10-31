@@ -9,19 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require font-awesome
  *= require foundation_and_overrides
  *= require_tree .
  */
 
 .row.extramargin {margin: 50px auto 10px !important;}
 
-.wrapper {
-    text-align: center;
-}
 
-.button-center {
-    position: absolute;
-    top: 50%;
-}
 
 

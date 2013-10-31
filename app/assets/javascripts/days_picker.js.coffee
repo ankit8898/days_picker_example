@@ -13,3 +13,5 @@ $(document).ready ->
     dataType: "script"
    
    $(".years").change(getDates).trigger "change"
+   
+   $('a.reveal-link').trigger('click');

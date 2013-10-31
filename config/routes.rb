@@ -27,7 +27,16 @@ DaysPickerRailsExamples::Application.routes.draw do
   #   end
   
   
-  resources :days_picker, only: [:index,:create]
+  resources :days_picker, only: [:index,:create] do 
+    collection do 
+      #get :by_year
+      #get :by_year_and_month
+    end
+  end
+  
+  get 'by_years' => 'days_picker#by_year'
+  get 'by_year_and_months' => 'days_picker#by_year_and_month'
+  
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

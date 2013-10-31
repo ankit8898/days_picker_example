@@ -1,0 +1,17 @@
+<% if defined? by_month %>
+<div class="panel">
+ <h3> You asked for <%= type %> in <%= year %>, which has <%= days %> days .<h3>
+
+
+
+
+</div>
+<% else defined? by_month_and_year %>
+<div class="panel">
+  <h3> You asked for <%= type %> in <%= Date::MONTHNAMES[month.to_i] %> - <%= year %>, which has <%= days %> days .<h3>
+</div>
+<%end%>
+<h3 class='subheader'>Thank you ! <i class="fa fa-thumbs-up"></i> </h3>
+
+
+<a class="close-reveal-modal">&#215;</a>
