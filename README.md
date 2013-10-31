@@ -1,4 +1,4 @@
-## Days Picker Example
+## Days Picker Example (www.dayspicker.com)
 
 This is a sample Application showing the usage of [Days Picker Gem](https://rubygems.org/gems/days_picker)
 
